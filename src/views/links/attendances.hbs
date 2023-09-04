@@ -1,0 +1,65 @@
+<a href="secretary" class="btn btn-primary btn-lg ">
+  volver a pagina anterior
+</a>
+<a href="intoattendance" class="btn btn-primary btn-lg ">
+  Ingresar asistencia
+</a>
+<div class="container-fluid mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <form action="/links/attendances" method="post">
+                        <div class="form-group">
+                           <input type="text" class="form-control" name="code" placeholder="codigo" autofocus required>
+                        </div>
+                        <div class="form-group">
+                           <input type="text" class="form-control mt-2" name="statu_assistance" placeholder="Asistencias" autofocus required>
+                        </div>
+                        <div class="form-group">
+                           <input type="text" class="form-control mt-2" name="months_assitances" placeholder="Mes" autofocus required>
+                        </div>
+                        <hr class="my-2">
+                        <div class="form-group">
+                            <button class="btn btn-primary btn-lg" >
+                                Ingresar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+ 
+<h1 class="display-5  text-left my-1 mt-5">
+  Informacion del estudiante
+</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">code</th>
+      <th scope="col">nombre</th>
+      <th scope="col">apellido</th>
+      <th scope="col">Statu de asistencia</th>
+      <th scope="col">fecha</th>
+      <th scope="col">Mes</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr>
+       
+      <td>{{result.code}}</td>
+      <td>{{result.first_name}}</td>
+      <td>{{result.last_name}}</td>
+      <td>{{result.statu_assistance}}</td>
+      <td>{{result.date_attendance}}</td>
+      <td>{{result.months_assitances}}</td>
+      
+      
+     
+    </tr>
+    
+  </tbody>
+</table>

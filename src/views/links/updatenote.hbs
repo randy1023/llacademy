@@ -1,0 +1,44 @@
+<div class="container mt-5 mb-5" style="background-color: #ccfbff;">
+  <form action="/links/updatenote/{{result.code}}" method="post">
+    <h1 class="mb-3">Ingresar notas</h1>
+     <div class="mb-3">
+      <label for="last_name" class="form-label">Fecha</label>
+      <input type="text" class="form-control" id="last_name" name="date_note" value="{{result.date_note}}" placeholder="AAAA-MM-DD" autofocus required>
+    </div>
+    <div class="mb-3">
+      <label for="date_of_registration" class="form-label">Profesor(a)</label>
+      <input type="text" class="form-control" id="date_of_registration" name="teacher_name" value="{{result.teacher_name}}" placeholder="Profesor(a)"autofocus  required >
+    </div>
+     <div class="mb-3">
+      <label for="phone" class="form-label">Leccion</label>
+      <input type="tel" class="form-control" id="phone" name="lesson" value="{{result.lesson}}" placeholder="Leccion" autofocus required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Calificacion</label>
+      <input type="text" class="form-control" id="email" name="note" value="{{result.note}}" placeholder="Calificacion" autofocus required>
+    </div>
+    <select class="form-select mt-2" aria-label="Default select example" name="task" required>
+        <option selected>Seleccione tarea</option>
+        <option value="face to face">Face to face</option>
+        <option value="examen escrito">Examen Escrito</option>
+        <option value="lista de verbos">Lista de verbos</option>
+    </select>
+    <select class="form-select mt-2" aria-label="Default select example" name="task_status" required>
+        <option selected>Estado Calificativo</option>
+        <option value="Aprobada">Aprobado</option>
+        <option value="Reprobada">Reprobado</option>
+        <option value="Pendiente">Pendiente</option>
+    </select>
+    <select class="form-select mt-2 mb-3" aria-label="Default select example" name="description_task" required>
+        <option selected>Nivel</option>
+        <option value="primer libro">Primer libro</option>
+    </select>
+   <div class="mb-3">
+      <label for="code" class="form-label">Code</label>
+      <input type="text" class="form-control" id="code" name="code" value="{{result.code}}" placeholder="codigo unico"  readonly>
+    </div>
+    <div class="row justify-content-center">
+        <button type="submit" class="btn btn-primary m-auto w-50 mb-3">Cargar notas</button>
+    </div>
+  </form>
+</div>

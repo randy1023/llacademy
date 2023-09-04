@@ -1,0 +1,80 @@
+ <a href="accountant" class="btn btn-primary btn-lg">
+  Volver a pagina anterior
+</a>
+ <div class="container-fluid mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <form action="/links/accountanMonth" method="post">
+                        <div class="form-group">
+                           <input type="text" class="form-control" name="payment_place" placeholder="Sucursal" autofocus required>
+                        </div>
+                        <div class="form-group">
+                           <input type="text" class="form-control mt-2" name="months" placeholder="Mes" autofocus required>
+                        </div>
+                        <div class="form-group">
+                           <input type="text" class="form-control mt-2" name="currency_type" placeholder="Tipo de pago" autofocus required>
+                        </div>
+                        <hr class="my-2">
+                        <div class="form-group">
+                            <button class="btn btn-primary btn-lg" >
+                                Ingresar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<h1 class="display-5  text-left my-1 mt-5">
+  Informacion de pagos por meses
+</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">code</th>
+      <th scope="col">nombre</th>
+      <th scope="col">apellido</th>
+      <th scope="col">Cedula</th>
+      <th scope="col">curso</th>
+      <th scope="col">Monto</th>
+      <th scope="col">Tipo de pago</th>
+      <th scope="col">Mes</th>
+      <th scope="col">fecha</th>
+      <th scope="col">Descripcion</th>
+       <th scope="col">Sucursal</th>
+    </tr>
+  </thead>
+  {{#each results}}
+  <tbody class="table-group-divider">
+    <tr>
+       
+      <td>{{code}}</td>
+      <td>{{first_name}}</td>
+      <td>{{last_name}}</td>
+      <td>{{identity_card}}</td>
+      <td>{{name_course}}</td>
+      <td>{{amount}}</td>
+      <td>{{currency_type}}</td>
+      <td>{{months}}</td>
+      <td>{{date_time_1}}</td>
+      <td>{{description}}</td>
+      <td>{{payment_place}}</td>
+      
+      
+     
+    </tr>
+    
+  </tbody>
+  {{/each}}
+</table>
+
+<div class="text-end">
+  <a class="btn btn-sm btn-outline-danger border-0" href="pdfincome2/{{results.[0].payment_place}}/{{results.[0].months}}/{{results.[0].currency_type}}">
+  <i class="fa fa-file-pdf"></i>
+  </a>
+</div>

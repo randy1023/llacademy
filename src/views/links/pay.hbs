@@ -1,0 +1,36 @@
+<div class="container mt-5 mb-5" style="background-color: #ccfbff;">
+  <form action="/links/pay" method="post">
+    <h1 class="mb-3">Pagos</h1>
+    <div class="mb-3">
+      <label for="code" class="form-label">fecha</label>
+      <input type="text" class="form-control" id="code" name="date_time_1" placeholder="AAAA-MM-DD" autofocus required>
+    </div>
+    <div class="mb-3">
+      <label for="first_name" class="form-label">Mes</label>
+      <input type="text" class="form-control" id="first_name" name="months" placeholder="Mes" autofocus required>
+    </div>
+    <div class="mb-3">
+     <label for="first_name" class="form-label">Monto</label>
+     <input type="number" class="form-control" id="first_name" name="amount" placeholder="Monto" autofocus required min="0" step="0.01" >
+   </div>
+    <div class="mb-3">
+      <label for="last_name" class="form-label">Tipo de pago</label>
+      <input type="text" class="form-control" id="last_name" name="currency_type"  placeholder="Tipo de pago" autofocus required>
+    </div>
+    <div class="mb-3">
+      <label for="date_of_registration" class="form-label">Descripcion de pagos</label>
+      <input type="text" class="form-control" id="date_of_registration" name="description"  placeholder="Descripcion de pago" autofocus  required >
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">Codigo</label>
+      <input type="tel" class="form-control" id="phone" name="code"  placeholder="Codigo" autofocus required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Sucursal</label>
+      <input type="text" class="form-control" id="email" name="payment_place"  placeholder="Sucursal" autofocus required>
+    </div>
+    <div class="row justify-content-center">
+        <button type="submit" class="btn btn-primary m-auto w-50 mb-3">Ingresar</button>
+    </div>
+  </form>
+</div>

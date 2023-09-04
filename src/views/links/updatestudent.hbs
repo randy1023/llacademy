@@ -1,0 +1,80 @@
+<div class="container mt-5 mb-5" style="background-color: #ccfbff;">
+  <form action="/links/updatestudent/{{result.code}}" method="post">
+    <h1 class="mb-3">Actualizacion de informacion</h1>
+    <div class="mb-3">
+      <label for="code" class="form-label">Code</label>
+      <input type="text" class="form-control" id="code" name="code" value="{{result.code}}" readonly>
+    </div>
+    <div class="mb-3">
+      <label for="first_name" class="form-label">nombre</label>
+      <input type="text" class="form-control" id="first_name" name="first_name" value="{{result.first_name}}" placeholder="Nombre" autofocus required>
+    </div>
+    <div class="mb-3">
+      <label for="last_name" class="form-label">Apellido</label>
+      <input type="text" class="form-control" id="last_name" name="last_name" value="{{result.last_name}}" placeholder="Apellido" autofocus required>
+    </div>
+    <div class="mb-3">
+      <label for="date_of_registration" class="form-label">Fecha de inscripcion</label>
+      <input type="text" class="form-control" id="date_of_registration" name="date_time" value="{{result.date_time}}" placeholder="AAAA-MM-DD"autofocus  required >
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">Telefono</label>
+      <input type="tel" class="form-control" id="phone" name="phone" value="{{result.phone}}" placeholder="Telefono" autofocus required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Correo</label>
+      <input type="email" class="form-control" id="email" name="mail" value="{{result.mail}}" placeholder="Correo electronico" autofocus required>
+    </div>
+    <div class="mb-3">
+      <label for="address" class="form-label">Direccion</label>
+      <input type="text" class="form-control" id="address" name="address" value="{{result.address}}" placeholder="Direccion" autofocus required>
+    </div>
+    <div class="mb-3">
+      <label for="ID" class="form-label">Cedula</label>
+      <input type="text" class="form-control" id="ID" name="identity_card" value="{{result.identity_card}}" placeholder="Cedula" autofocus required>
+    </div>
+    <div class="mb-3">
+      <label for="course" class="form-label">Curso</label>
+      <input type="text" class="form-control" id="course" name="name_course" value="{{result.name_course}}" placeholder="Curso" autofocus required>
+    </div>
+    <div class="mb-3">
+      <label for="day_1" class="form-label">Day 1</label>
+      <input type="text" class="form-control" id="day_1" name="day_1" value="{{result.day_1}}" placeholder="Dia" autofocus required>
+    </div>
+    <div class="mb-3">
+      <label for="shift" class="form-label">turno 1</label>
+      <input type="text" class="form-control" id="shift" name="shift" value="{{result.shift}}" placeholder="Turno" autofocus required>
+    </div>
+    <div class="mb-3">
+      <label for="start_time_1" class="form-label">hora de entrada</label>
+      <input type="text" class="form-control" id="start_time_1" name="time_entry" value="{{result.time_entry}}" placeholder="00:00" autofocus required>
+    </div>
+    <div class="mb-3">
+      <label for="end_time_1" class="form-label">hora de salida</label>
+      <input type="text" class="form-control" id="end_time_1" name="time_departure" value="{{result.time_departure}}" placeholder="00:00" autofocus required>
+    </div>
+    <div class="mb-3">
+      <label for="day_2" class="form-label">Dia 2</label>
+      <input type="text" class="form-control" id="day_2" name="day_2" value="{{result.day_2}}" placeholder="Dia" autofocus required>
+    </div>
+    <div class="mb-3">
+      <label for="shift_2" class="form-label">Turno 2</label>
+      <input type="text" class="form-control" id="shift_2" name="shift_2" value="{{result.shift_2}}" placeholder="Turno" autofocus required>
+    </div>
+     <div class="mb-3">
+      <label for="start_time_1" class="form-label">hora de entrada</label>
+      <input type="text" class="form-control" id="start_time_1" name="time_entry_2" value="{{result.time_entry_2}}" placeholder="00:00" autofocus required>
+    </div>
+    <div class="mb-3">
+      <label for="end_time_1" class="form-label">hora de salida</label>
+      <input type="text" class="form-control" id="end_time_1" name="time_departure_2" value="{{result.time_departure_2}}" placeholder="00:00" autofocus required>
+    </div>
+     <div class="mb-3">
+      <label for="statu" class="form-label">Estatu</label>
+      <input type="text" class="form-control" id="end_time_1" name="statu" value="{{result.statu}}" placeholder="Estatu" autofocus required>
+    </div>
+    <div class="row justify-content-center">
+        <button type="submit" class="btn btn-primary m-auto w-50 mb-3">Actualizar</button>
+    </div>
+  </form>
+</div>

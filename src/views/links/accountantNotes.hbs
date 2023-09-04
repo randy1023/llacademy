@@ -1,0 +1,71 @@
+ <a href="accountant" class="btn btn-primary btn-lg">
+  Volver a pagina anterior
+</a>
+<div class="container-fluid mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <form action="/links/accountantNotes" method="post">
+                        {{!-- <div class="form-group ">
+                           <input type="text" class="form-control" name="description_task" placeholder="Estado calificativo" autofocus required>
+                        </div> --}}
+                         <select class="form-select mt-2" aria-label="Default select example" name="task_status" required>
+                            <option selected>Estado Calificativo</option>
+                            <option value="Reprobada">Reprobado</option>
+                        </select>
+                        <hr class="my-2">
+                        <div class="form-group mt-2">
+                            <button class="btn btn-primary btn-lg" >
+                                Chequear tareas
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+ 
+<h1 class="display-5  text-left my-1 mt-5">
+  Informacion de Alumnos con evaluacion reprobada
+</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">code</th>
+      <th scope="col">nombre</th>
+      <th scope="col">apellido</th>
+      <th scope="col">curso</th>
+      <th scope="col">tarea</th>
+      <th scope="col">leccion</th>
+      <th scope="col">profesor(a)</th>
+      <th scope="col">nota</th>
+      <th scope="col">fecha</th>
+      <th scope="col">statu de la tarea</th>
+      <th scope="col">nivel</th>
+    </tr>
+  </thead>
+  {{#each results}}
+  <tbody class="table-group-divider">
+    <tr>
+       
+      <td>{{code}}</td>
+      <td>{{first_name}}</td>
+      <td>{{last_name}}</td>
+      <td>{{name_course}}</td>
+      <td>{{task}}</td>
+      <td>{{lesson}}</td>
+      <td>{{teacher_name}}</td>
+      <td>{{note}}</td>
+      <td>{{date_note}}</td>
+      <td>{{task_status}}</td>
+      <td>{{description_task}}</td>
+      
+     
+    </tr>
+    
+  </tbody>
+  {{/each}}
+</table>

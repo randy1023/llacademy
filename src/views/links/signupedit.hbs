@@ -1,0 +1,35 @@
+<a href="/links/signupsee" class="btn btn-primary btn-lg ">
+  volver atras
+</a>
+<div class="container-fluid mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card text-center">
+                <h3>Actualizar usuario</h3>
+                <div class="card-body">
+                    <form action="/links/signupedit/{{result.username}}" method="post">
+                        <div class="form-group">
+                           <input type="text" class="form-control" name="full_name" value="{{result.full_name}}" placeholder=" Ingresar nombre completo" autofocus required>
+                        </div>
+                        <hr class="my-2">
+                        <div class="form-group">
+                           <input type="email" class="form-control" name="username" value="{{result.username}}" placeholder=" Ingresar username" autofocus required>
+                        </div>
+                        <hr class="my-2">
+                        <div class="form-group">
+                           <input type="text" class="form-control" name="rol" value="{{result.rol}}" placeholder=" Ingresar Rol" autofocus required>
+                        </div>
+                        <hr class="my-2">
+                        <div class="form-group"> 
+                            <button class="btn btn-primary btn-block">
+                                Actualizar usuario
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

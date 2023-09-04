@@ -1,0 +1,57 @@
+<a href="signupedit/{{result.username}}" class="btn btn-primary btn-lg ">
+  EDITAR USUARIOS
+</a>
+<a href="signup" class="btn btn-primary btn-lg ">
+  Volver
+</a>
+<div class="container-fluid mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <form action="/links/signupsee" method="post">
+                        <div class="form-group">
+                           <input type="text" class="form-control" name="full_name" placeholder="Nombre" autofocus required>
+                        </div>
+                        <hr class="my-2">
+                        <div class="form-group">
+                           <input type="text" class="form-control" name="username" placeholder="Username" autofocus required>
+                        </div>
+                        <hr class="my-2">
+                        <div class="form-group">
+                            <button class="btn btn-primary btn-block">
+                                Ver
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<h1 class="display-5  text-left my-1 mt-5">
+  Informacion del estudiante
+</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Username</th>
+      <th scope="col">rol</th>
+      
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr>
+       
+      <td>{{result.full_name}}</td>
+      <td>{{result.username}}</td>
+      <td>{{result.rol}}</td>
+    
+      
+     
+    </tr>
+    
+  </tbody>
+</table>

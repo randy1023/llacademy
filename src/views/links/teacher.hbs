@@ -1,0 +1,129 @@
+<a href="enternotes" class="btn btn-primary btn-lg">
+  Ingresar notas
+</a>
+
+<a href="updatenote/{{results.[0].code}}" class="btn btn-primary btn-lg ">
+  Editar notas
+</a>
+
+{{!-- <a href="updatestudent/{{results.[0].code}}" class="btn btn-primary btn-lg ">
+  Filtrar tareas 
+</a> --}}
+<div class="container-fluid mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <form action="/links/teacher" method="post">
+                        <div class="form-group ">
+                           <input type="text" class="form-control" name="code" placeholder="codigo" autofocus required>
+                        </div>
+                        <select class="form-select mt-2" aria-label="Default select example" name="task_status" required>
+                            <option selected>Estado Calificativo</option>
+                            <option value="Aprobada">Aprobado</option>
+                            <option value="Reprobada">Reprobado</option>
+                            <option value="Pendiente">Pendiente</option>
+                        </select>
+
+                        <select class="form-select mt-2" aria-label="Default select example" name="task" required>
+                            <option selected>Seleccione tarea</option>
+                            <option value="face to face">Face to face</option>
+                            <option value="examen escrito">Examen Escrito</option>
+                            <option value="lista de verbos">Lista de verbos</option>
+                        </select>
+                         <select class="form-select mt-2" aria-label="Default select example" name="description_task" required>
+                            <option selected>Nivel</option>
+                            <option value="primer libro">Primer libro</option>
+                            
+                        </select>
+                        <hr class="my-2">
+                        <div class="form-group mt-2">
+                            <button class="btn btn-primary btn-lg" >
+                                Chequear tareas
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+ 
+<h1 class="display-5  text-left my-1 mt-5">
+  Informacion de nota
+</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">code</th>
+      <th scope="col">nombre</th>
+      <th scope="col">apellido</th>
+      <th scope="col">curso</th>
+      <th scope="col">tarea</th>
+      <th scope="col">leccion</th>
+      <th scope="col">profesor(a)</th>
+      <th scope="col">nota</th>
+      <th scope="col">fecha</th>
+      <th scope="col">statu de la tarea</th>
+      <th scope="col">nivel</th>
+    </tr>
+  </thead>
+  {{#each results}}
+  <tbody class="table-group-divider">
+    <tr>
+       
+      <td>{{code}}</td>
+      <td>{{first_name}}</td>
+      <td>{{last_name}}</td>
+      <td>{{name_course}}</td>
+      <td>{{task}}</td>
+      <td>{{lesson}}</td>
+      <td>{{teacher_name}}</td>
+      <td>{{note}}</td>
+      <td>{{date_note}}</td>
+      <td>{{task_status}}</td>
+      <td>{{description_task}}</td>
+      
+     
+    </tr>
+    
+  </tbody>
+  {{/each}}
+</table>
+{{!-- <h1 class="display-5  text-left my-1 mt-5">
+  Informacion sobre curso y horario
+</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">curso</th>
+      <th scope="col">dia 1</th>
+      <th scope="col">turno</th>
+      <th scope="col">entrada</th>
+      <th scope="col">salida</th>
+      <th scope="col">dia 2</th>
+      <th scope="col">turno</th>
+      <th scope="col">entrada</th>
+       <th scope="col">salida</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr>
+       
+      <td>{{results.[0].name_course}}</td>
+      <td>{{results.[0].day_1}}</td>
+      <td>{{results.[0].shift}}</td>
+      <td>{{results.[0].time_entry}}</td>
+      <td>{{results.[0].time_departure}}</td>
+      <td>{{results.[0].day_2}}</td>
+      <td>{{results.[0].shift_2}}</td>
+      <td>{{results.[0].time_entry_2}}</td>
+      <td>{{results.[0].time_departure_2}}</td>
+      
+     
+    </tr>
+    
+  </tbody>
+</table>
+ --}}
